@@ -147,7 +147,11 @@ import os
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # CORS - allow local frontend to call backend (dev)
-CORS_ALLOW_ALL_ORIGINS = "https://monishaj1997.github.io",
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://monishaj1997.github.io",
+]
 
 # DRF + JWT + pagination + filters + throttling + versioning
 REST_FRAMEWORK = {
@@ -190,4 +194,5 @@ SIMPLE_JWT = {
     "BLACKLIST_AFTER_ROTATION": True,
     "AUTH_HEADER_TYPES": ("Bearer",),
 }
+
 
